@@ -12,13 +12,12 @@ var oldMidPt;
 var title;
 var color;
 var stroke;
-var colors;
+//var colors;
 var index;
 
 function init() {
 	canvas = document.getElementById("myCanvas");
 	index = 0;
-	colors = "#000000"
 
 	//check to see if we are running in a browser with touch support
 	stage = new createjs.Stage(canvas);
@@ -51,7 +50,8 @@ function handleMouseDown(event) {
 		stage.removeChild(title);
 	}
 	//color = colors[(index++) % colors.length];
-        color = "#000000";
+        changeColor();
+        changeSize();
 	//stroke = Math.random() * 30 + 10 | 0;
 	oldPt = new createjs.Point(stage.mouseX, stage.mouseY);
 	oldMidPt = oldPt.clone();
