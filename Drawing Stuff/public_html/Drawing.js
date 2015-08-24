@@ -52,6 +52,7 @@ function handleMouseDown(event) {
 	}
         changeColor();
         changeSize();
+        cPush();
 	oldPt = new createjs.Point(stage.mouseX, stage.mouseY);
 	oldMidPt = oldPt.clone();
 	stage.addEventListener("stagemousemove", handleMouseMove);

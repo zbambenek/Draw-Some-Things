@@ -12,6 +12,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="GameCSS.css">
         <script src="Drawing.js"></script>
         <script src="ChangeColorSize.js"></script>
+        <script src="UndoRedo.js"></script>
         <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
     </head>
     <body onload="init()">
@@ -27,6 +28,8 @@ and open the template in the editor.
         <input onclick="changeSize()" id="cs1" type="radio" name="ChoseSize" value="cbSmall" checked autofocus>Small
         <input onclick="changeSize()" id="cs2" type="radio" name="ChoseSize" value="cbMedium">Medium
         <input onclick="changeSize()" id="cs3" type="radio" name="ChoseSize" value="cbLarge">Large
+        |
+        <button type='button' onclick="drawingUndo()">Undo</button><button type='button' onclick="drawingRedo()">Redo</button>
         </form>
     </canvas><br/>
 
